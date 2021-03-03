@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %} Registro {% endblock %}
+
+{% block content%}
+<div id="conte-form">
+    <form method="post" action=''>
+        {% csrf_token %}
+        <div class="form-campos">
+            {{form.username.label}}
+            {{form.username}}
+        </div>
+        <div class="form-campos">
+            {{form.email.label}}
+            {{form.email}}
+        </div>
+        <div class="form-campos">
+            {{form.password.label}}
+            {{form.password}}
+        </div>
+        <div class="form-campos">
+            {{form.password2.label}}
+            {{form.password2}}
+        </div>
+        <div class="btn-enviar">
+
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

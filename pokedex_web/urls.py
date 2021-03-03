@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+
+from pokedex import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', views.view_pokemons, name='index'),
+    path('login/', views.ingresar, name='login'),
+    path('salir/', views.salir, name='salir'),
+    path('registro/', views.registro_usuario, name='registro'),
+    path('pokemon-agregar/', views.registro_pokemon, name='pokemon'),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block content %}
+<div class="cont-button">
+    <a id="btn-agregar" href="{% url 'pokemon' %}">Nuevo +</a>
+</div>
+<div id="contenedor-poke">
+
+    {% for pokemon  in pokemons %}
+    <div class="tarjet">
+
+        <h3>
+            {{pokemon.name}}
+        </h3>
+
+
+        <div class="sprite">
+            
+            <img src="{{MEDIA_URL}}/{{pokemon.path_sprite}}" alt="">
+        </div>
+        <div class="habilities">
+
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+
+{% block title %} Login {% endblock %}
+
+{% block content%}
+
+<div id="conte-form">
+    {% if messages %}
+        {% for mensaje in messages %}
+            {% if mensaje.tags == 'error' %}
+                <div class="aviso rojo">
+                    {{mensaje}}
+                </div>
+            {% endif %}
+        {% endfor%}
+    {% endif %}
+
+    <form method="post" action=''>
+        {% csrf_token %}
+        <div class="form-titulo">
+            
+        </div>
+
+        <hr />
+        <div id="box-login">
+            <div class="form-campos">
+                <label for="username">Usuario</label>
+                <input type="text" class="input-campo" name="username" />
+            </div>
+
+            <div class="form-campos">
+                <label for="psword">contraseña</label>
+                <input type="password" class="input-campo" name="psword" />
+            </div>
+            <div class="btn-enviar">
+
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
