@@ -29,4 +29,4 @@
       si ponemos esa ruta en el navegador se verá la aplicación corriendo</p>
  
 <h3>Link de demo </h3>
-<ahref="https://pokedexwebapp.herokuapp.com/" Style="color:blue "> Link</a>
+<pre> href="https://pokedexwebapp.herokuapp.com/" </pre>
