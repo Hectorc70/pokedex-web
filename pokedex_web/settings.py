@@ -27,7 +27,7 @@ SECRET_KEY = '5wq#z_37jvau*)e1eg2omcfrea4#5%ix2-@p#y11dj^x6(hgox'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pokedexwebapp.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'pokedex_web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd9bm34j62g4e91',
+            'HOST': 'ec2-18-211-97-89.compute-1.amazonaws.com',
+            'PORT': 5432,
+            'USER': 'jzbdatyzpbnrrz',
+            'PASSWORD':'7629a66bcda0a8083715c61894c3870fc9610fd4b967fb6d63f3eb463b135387',        
     }
 }
 
