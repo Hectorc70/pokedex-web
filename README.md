@@ -26,5 +26,5 @@
 </pre>
 
 <p>3.- En la consola le mostrara la ip y puerto en donde se esta corriendo 
-      si ponemos esa ruta en el navegador se vera la aplicacion corriendo</p>
+      si ponemos esa ruta en el navegador se verá la aplicación corriendo</p>
  
