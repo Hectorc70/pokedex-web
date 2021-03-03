@@ -27,4 +27,4 @@ urlpatterns = [
     path('salir/', views.salir, name='salir'),
     path('registro/', views.registro_usuario, name='registro'),
     path('pokemon-agregar/', views.registro_pokemon, name='pokemon'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
