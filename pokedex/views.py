@@ -74,7 +74,7 @@ def salir(request):
     logout(request)
     messages.success(request, "Sesion Finalizada")
 
-    return redirect('login') 
+    return redirect('index') 
 
 
 
@@ -107,7 +107,7 @@ def registro_pokemon(request):
         name = formulario.cleaned_data.get('name')
         path = formulario.cleaned_data.get('path_sprite')
 
-        Pok = Pokemon(name, path)
+        Pok = Pokemon(name=name, path_sprite=path)
         Pok.save()
 
         return redirect('index')

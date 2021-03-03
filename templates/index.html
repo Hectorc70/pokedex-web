@@ -3,9 +3,11 @@
 {% block title %} Inicio {% endblock %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <div class="cont-button">
     <a id="btn-agregar" href="{% url 'pokemon' %}">Nuevo +</a>
 </div>
+{%endif %}
 <div id="contenedor-poke">
 
     {% for pokemon  in pokemons %}
@@ -18,7 +20,7 @@
 
         <div class="sprite">
             
-            <img src="{{MEDIA_URL}}/{{pokemon.path_sprite}}" alt="">
+            <img src="{{pokemon.path_sprite}}" alt="">
         </div>
         <div class="habilities">
 

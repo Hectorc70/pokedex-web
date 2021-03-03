@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Pokemon(models.Model):
-    id_poke = models.AutoField(primary_key=True)
+    id_poke = models.AutoField(auto_created=True,primary_key=True, unique=True)
     name = models.CharField(max_length=100, blank=False)
-    path_sprite = models.ImageField(upload_to='sprites/')
+    path_sprite = models.CharField(max_length=500, blank=False)
 
 
